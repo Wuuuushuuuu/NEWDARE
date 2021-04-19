@@ -8,7 +8,11 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
+<<<<<<< HEAD
+set VIRTUAL_ENV=C:\Users\Admin\Documents\GitHub\LBYCPD2_DARE\env
+=======
 set VIRTUAL_ENV=C:\Users\asus\Documents\GitHub\LBYCPD2_DARE\env
+>>>>>>> fb6ee2b78e50819a7f86bdf1347f0a6e2b8fb168
 
 if not defined PROMPT set PROMPT=$P$G
 
