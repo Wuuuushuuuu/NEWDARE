@@ -81,10 +81,10 @@ WSGI_APPLICATION = 'web_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'Dentist_Login_Cr',
-        'USER': 'postgres',
-        'PASSWORD': "Leonard1108",
-        'HOST': "localhost",
+        'NAME': 'daredbslive',
+        'USER': 'dare',
+        'PASSWORD': "daremaster",
+        'HOST': "dare-dbs.c8fxnwcyffif.ap-southeast-1.rds.amazonaws.com",
         'PORT': '5432',
     }
 }
