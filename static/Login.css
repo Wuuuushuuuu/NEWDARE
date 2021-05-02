@@ -1,0 +1,136 @@
+.u-section-1 {
+  background-image: none;
+}
+
+.u-section-1 .u-sheet-1 {
+  min-height: 741px;
+}
+
+.u-section-1 .u-group-1 {
+  width: 492px;
+  min-height: 548px;
+  box-shadow: 0 0 8px 0 rgba(128,128,128,1);
+  background-image: none;
+  height: auto;
+  margin: 52px auto 0;
+}
+
+.u-section-1 .u-container-layout-1 {
+  padding: 30px;
+}
+
+.u-section-1 .u-text-1 {
+  margin: -9px 136px 0 119px;
+}
+
+.u-section-1 .u-shape-1 {
+  width: 90px;
+  height: 90px;
+  margin: -45px 0 0 auto;
+}
+
+.u-section-1 .u-text-2 {
+  margin: -27px 140px 0 128px;
+}
+
+.u-section-1 .u-image-1 {
+  width: 158px;
+  height: 158px;
+  margin: 18px auto 0 129px;
+}
+
+.u-section-1 .u-form-1 {
+  height: 181px;
+  width: 475px;
+  margin: 38px -21px 0;
+}
+
+.u-section-1 .u-btn-1 {
+  background-image: none;
+  border-style: none;
+}
+
+.u-section-1 .u-btn-2 {
+  border-style: none none solid;
+  margin: -48px auto 0 18px;
+  padding: 0;
+}
+
+.u-section-1 .u-shape-2 {
+  width: 158px;
+  height: 158px;
+  margin: -65px auto 52px 228px;
+}
+
+@media (max-width: 1199px) {
+  .u-section-1 .u-group-1 {
+    height: auto;
+  }
+
+  .u-section-1 .u-text-1 {
+    margin-top: -3px;
+    margin-left: 19px;
+  }
+
+  .u-section-1 .u-shape-1 {
+    margin-top: 21px;
+    margin-right: 26px;
+  }
+
+  .u-section-1 .u-text-2 {
+    margin-top: -152px;
+    margin-left: 136px;
+  }
+
+  .u-section-1 .u-image-1 {
+    margin-top: 2px;
+  }
+
+  .u-section-1 .u-form-1 {
+    width: 432px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-section-1 .u-container-layout-1 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .u-section-1 .u-shape-1 {
+    margin-top: 0;
+  }
+
+  .u-section-1 .u-text-2 {
+    margin-top: -131px;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-section-1 .u-group-1 {
+    width: 340px;
+  }
+
+  .u-section-1 .u-text-1 {
+    margin-right: 60px;
+  }
+
+  .u-section-1 .u-text-2 {
+    margin-right: 64px;
+    margin-left: 92px;
+  }
+
+  .u-section-1 .u-form-1 {
+    width: 320px;
+  }
+
+  .u-section-1 .u-btn-2 {
+    margin-left: 0;
+  }
+
+  .u-section-1 .u-shape-2 {
+    margin-left: 182px;
+  }
+}
