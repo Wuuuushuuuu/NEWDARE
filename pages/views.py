@@ -15,3 +15,15 @@ def Login_view_client(request, *args, **kwargs):
 
 def Register_view(request, *args, **kwargs):
      return render(request, "Register.html", {})
+
+def Dentist_Acct_View(request, *args, **kwargs):
+     return render(request, "Account.html", {})
+
+def Dentist_Apnt_View(request, *args, **kwargs):
+     return render(request, "Appointments.html", {})
+
+def Dentist_Dashboard(request, *args, **kwargs):
+     return render(request, "Main-Dashboard.html", {})
+
+def Dentist_Records(request, *args, **kwargs):
+     return render(request, "Records.html", {})

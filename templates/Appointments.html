@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html style="font-size: 16px;">
   <head>
@@ -6,11 +8,11 @@
     <meta name="keywords" content="Dashboard">
     <meta name="description" content="">
     <meta name="page_type" content="np-template-header-footer-from-plugin">
-    <title>Main Dashboard</title>
-    <link rel="stylesheet" href="nicepage.css" media="screen">
-<link rel="stylesheet" href="Main-Dashboard.css" media="screen">
-    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
-    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+    <title>Appointments</title>
+    <link rel="stylesheet" href="{% static 'nicepage2.css' %}" media="screen">
+<link rel="stylesheet" href="{% static 'Appointments.css' %}" media="screen">
+    <script class="u-script" type="text/javascript" src="{% static 'jquery.js' %}" defer=""></script>
+    <script class="u-script" type="text/javascript" src="{% static 'nicepage.js' %}" defer=""></script>
     <meta name="generator" content="Nicepage 3.12.1, nicepage.com">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
     
@@ -21,13 +23,13 @@
 		"name": "",
 		"url": "index.html"
 }</script>
-    <meta property="og:title" content="Main Dashboard">
+    <meta property="og:title" content="Appointments">
     <meta property="og:type" content="website">
     <meta name="theme-color" content="#478ac9">
     <link rel="canonical" href="index.html">
     <meta property="og:url" content="index.html">
   </head>
-  <body data-home-page="Main-Dashboard.html" data-home-page-title="Main Dashboard" class="u-body"><header class="u-clearfix u-header u-valign-middle u-white u-header" id="sec-e7b7"><div class="u-palette-2-base u-shape u-shape-rectangle u-shape-1"></div><img class="u-image u-image-1" src="images/LOGO1.png" data-image-width="479" data-image-height="214"></header>
+  <body class="u-body"><header class="u-clearfix u-header u-valign-middle u-white u-header" id="sec-e7b7"><div class="u-palette-2-base u-shape u-shape-rectangle u-shape-1"></div><img class="u-image u-image-1" src="{% static 'images/LOGO1.png' %}" data-image-width="479" data-image-height="214"></header>
     <section class="u-clearfix u-section-1" id="sec-85b1">
       <div class="u-expanded-height u-palette-2-base u-shape u-shape-rectangle u-shape-1"></div><span class="u-icon u-icon-circle u-spacing-10 u-white u-icon-1" data-href="Account.html" data-page-id="2159627629"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 55 55" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-52b2"></use></svg><svg class="u-svg-content" viewBox="0 0 55 55" x="0px" y="0px" id="svg-52b2" style="enable-background:new 0 0 55 55;"><path d="M55,27.5C55,12.337,42.663,0,27.5,0S0,12.337,0,27.5c0,8.009,3.444,15.228,8.926,20.258l-0.026,0.023l0.892,0.752
 	c0.058,0.049,0.121,0.089,0.179,0.137c0.474,0.393,0.965,0.766,1.465,1.127c0.162,0.117,0.324,0.234,0.489,0.348
@@ -45,7 +47,7 @@
 	s-7.024,1.065-8.867,3.168c-2.119,2.416-1.935,5.346-1.883,5.864v4.667c-0.568,0.661-0.887,1.502-0.887,2.369v3.545
 	c0,1.101,0.494,2.128,1.34,2.821c0.81,3.173,2.477,5.575,3.093,6.389v2.894c0,0.816-0.445,1.566-1.162,1.958l-7.907,4.313
 	c-0.252,0.137-0.502,0.297-0.752,0.476C5.276,41.792,2,35.022,2,27.5z"></path></svg></span>
-      <h1 class="u-text u-text-1">Dashboard</h1>
+      <h1 class="u-text u-text-1">Appointments</h1>
       <div class="u-border-3 u-border-grey-dark-1 u-line u-line-horizontal u-line-1"></div>
       <h4 class="u-text u-text-palette-3-light-2 u-text-2">Account</h4><span class="u-icon u-icon-circle u-spacing-10 u-text-palette-1-base u-white u-icon-2" data-href="Main-Dashboard.html" data-page-id="17175088"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-ff96"></use></svg><svg class="u-svg-content" viewBox="0 0 512 512" x="0px" y="0px" id="svg-ff96" style="enable-background:new 0 0 512 512;"><path style="fill:#F8B64C;" d="M256,86.4c51.2,0,98.133,21.333,132.267,54.4l49.067-49.067  C391.467,45.867,327.467,17.067,256,17.067c-70.4,0-134.4,28.8-181.333,74.667l49.067,49.067C157.867,106.667,204.8,86.4,256,86.4z"></path><path style="fill:#54C0EB;" d="M123.733,140.8L74.667,91.733C28.8,138.667,0,202.667,0,273.067s28.8,134.4,74.667,181.333  l49.067-49.067c-34.133-34.133-54.4-81.067-54.4-132.267C69.333,221.867,89.6,174.933,123.733,140.8z"></path><path style="fill:#F1543F;" d="M437.333,91.733L388.267,140.8c34.133,34.133,54.4,81.067,54.4,132.267s-21.333,98.133-54.4,132.267  l49.067,49.067C483.2,408.533,512,344.533,512,273.067C512,202.667,483.2,138.667,437.333,91.733z"></path><path style="fill:#FFD15C;" d="M388.267,140.8l-46.933,46.933c-22.4-21.333-52.267-35.2-85.333-35.2s-64,13.867-85.333,35.2l0,0  L123.733,140.8C157.867,106.667,204.8,86.4,256,86.4S354.133,106.667,388.267,140.8z"></path><path style="fill:#84DBFF;" d="M170.667,358.4l-46.933,46.933c-34.133-34.133-54.4-81.067-54.4-132.267s21.333-98.133,54.4-132.267  l46.933,46.933c-21.333,21.333-35.2,52.267-35.2,85.333C134.4,306.133,148.267,337.067,170.667,358.4z"></path><path style="fill:#FF7058;" d="M442.667,273.067c0,51.2-21.333,98.133-54.4,132.267L341.333,358.4  c21.333-22.4,35.2-52.267,35.2-85.333s-13.867-64-35.2-85.333l46.933-46.933C422.4,174.933,442.667,221.867,442.667,273.067z"></path><path style="fill:#40596B;" d="M420.267,171.733L281.6,277.333c-2.133,12.8-12.8,21.333-25.6,21.333  c-14.933,0-26.667-11.733-26.667-26.667s11.733-26.667,26.667-26.667c3.2,0,5.333,0,8.533,1.067L420.267,171.733z"></path><path style="fill:#CDD6E0;" d="M347.733,494.933H164.267c-22.4,0-40.533-18.133-40.533-40.533l0,0  c0-22.4,18.133-40.533,40.533-40.533h182.4c22.4,0,40.533,18.133,40.533,40.533l0,0C388.267,476.8,370.133,494.933,347.733,494.933z  "></path><circle style="fill:#FFFFFF;" cx="256" cy="273.07" r="10.667"></circle></svg></span>
       <h4 class="u-text u-text-palette-3-light-2 u-text-3">Dashboard</h4><span class="u-icon u-icon-circle u-spacing-10 u-text-palette-1-base u-white u-icon-3" data-href="Appointments.html" data-page-id="50609161"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-03f6"></use></svg><svg class="u-svg-content" viewBox="0 0 512 512" id="svg-03f6"><g><g><path d="m246.23 426.666h-195.039c-18.851 0-34.132-15.282-34.132-34.132v-34.134h261.957z" fill="#d3dcfb"></path><path d="m460.825 153.6v143.398 95.534h-409.634c-18.851 0-34.132-15.282-34.132-34.133v-204.799l238.95-85.334z" fill="#ebf5fc"></path><g fill="#3c58a0"><path d="m77.336 221.867h-18.133c-4.418 0-8-3.582-8-8v-18.133c0-4.418 3.582-8 8-8h18.133c4.418 0 8 3.582 8 8v18.133c0 4.418-3.582 8-8 8z"></path><path d="m145.603 221.867h-18.133c-4.418 0-8-3.582-8-8v-18.133c0-4.418 3.582-8 8-8h18.133c4.418 0 8 3.582 8 8v18.133c0 4.418-3.582 8-8 8z"></path><path d="m213.869 221.867h-18.133c-4.418 0-8-3.582-8-8v-18.133c0-4.418 3.582-8 8-8h18.133c4.418 0 8 3.582 8 8v18.133c0 4.418-3.581 8-8 8z"></path><path d="m282.136 221.867h-18.133c-4.418 0-8-3.582-8-8v-18.133c0-4.418 3.582-8 8-8h18.133c4.418 0 8 3.582 8 8v18.133c0 4.418-3.582 8-8 8z"></path><path d="m350.391 221.867h-18.133c-4.418 0-8-3.582-8-8v-18.133c0-4.418 3.582-8 8-8h18.133c4.418 0 8 3.582 8 8v18.133c0 4.418-3.581 8-8 8z"></path><path d="m418.658 221.867h-18.133c-4.418 0-8-3.582-8-8v-18.133c0-4.418 3.582-8 8-8h18.133c4.418 0 8 3.582 8 8v18.133c0 4.418-3.582 8-8 8z"></path><path d="m77.336 290.133h-18.133c-4.418 0-8-3.582-8-8v-18.133c0-4.418 3.582-8 8-8h18.133c4.418 0 8 3.582 8 8v18.133c0 4.419-3.582 8-8 8z"></path><path d="m145.603 290.133h-18.133c-4.418 0-8-3.582-8-8v-18.133c0-4.418 3.582-8 8-8h18.133c4.418 0 8 3.582 8 8v18.133c0 4.419-3.582 8-8 8z"></path><path d="m213.869 290.133h-18.133c-4.418 0-8-3.582-8-8v-18.133c0-4.418 3.582-8 8-8h18.133c4.418 0 8 3.582 8 8v18.133c0 4.419-3.581 8-8 8z"></path><path d="m290.136 290.133v-25.6c0-4.713-3.82-8.533-8.533-8.533h-17.067c-4.713 0-8.533 3.82-8.533 8.533v17.067c0 4.713 3.821 8.533 8.533 8.533z"></path><path d="m77.336 358.4h-18.133c-4.418 0-8-3.582-8-8v-18.133c0-4.418 3.582-8 8-8h18.133c4.418 0 8 3.582 8 8v18.133c0 4.418-3.582 8-8 8z"></path><path d="m145.603 358.4h-18.133c-4.418 0-8-3.582-8-8v-18.133c0-4.418 3.582-8 8-8h18.133c4.418 0 8 3.582 8 8v18.133c0 4.418-3.582 8-8 8z"></path><path d="m213.869 358.4h-18.133c-4.418 0-8-3.582-8-8v-18.133c0-4.418 3.582-8 8-8h18.133c4.418 0 8 3.582 8 8v18.133c0 4.418-3.581 8-8 8z"></path>
@@ -67,6 +69,11 @@
 </g>
 </g></svg></span>
       <h4 class="u-text u-text-palette-3-light-2 u-text-5">Records</h4>
+      <img src="{% static 'images/Calendar.png' %}" alt="" class="u-image u-image-default u-image-1" data-image-width="2000" data-image-height="1414"><span class="u-icon u-icon-circle u-text-black u-icon-5"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 490.661 490.661" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-3fcd"></use></svg><svg class="u-svg-content" viewBox="0 0 490.661 490.661" x="0px" y="0px" id="svg-3fcd" style="enable-background:new 0 0 490.661 490.661;"><g><g><path d="M453.352,236.091L48.019,1.424c-3.285-1.899-7.36-1.899-10.688,0c-3.285,1.899-5.333,5.419-5.333,9.237v469.333    c0,3.819,2.048,7.339,5.333,9.237c1.643,0.939,3.499,1.429,5.333,1.429c1.856,0,3.691-0.469,5.355-1.429l405.333-234.667    c3.285-1.92,5.312-5.44,5.312-9.237S456.637,237.989,453.352,236.091z"></path>
+</g>
+</g></svg></span><span class="u-icon u-icon-circle u-text-black u-icon-6"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 490.661 490.661" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-709c"></use></svg><svg class="u-svg-content" viewBox="0 0 490.661 490.661" x="0px" y="0px" id="svg-709c" style="enable-background:new 0 0 490.661 490.661;"><g><g><path d="M453.331,1.424c-3.307-1.899-7.381-1.899-10.688,0L37.309,236.091c-3.285,1.92-5.312,5.44-5.312,9.237    s2.027,7.317,5.312,9.237l405.333,234.667c1.664,0.96,3.499,1.429,5.355,1.429c1.835,0,3.691-0.469,5.333-1.429    c3.285-1.899,5.333-5.419,5.333-9.237V10.661C458.664,6.843,456.616,3.323,453.331,1.424z"></path>
+</g>
+</g></svg></span>
     </section>
     
     
@@ -74,14 +81,14 @@
         <p class="u-small-text u-text u-text-variant u-text-1">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
       </div></footer>
     <section class="u-backlink u-clearfix u-grey-80">
-      <a class="u-link" href="https://nicepage.com/website-templates" target="_blank">
-        <span>Website Templates</span>
+      <a class="u-link" href="https://nicepage.com/html-templates" target="_blank">
+        <span>HTML Templates</span>
       </a>
       <p class="u-text">
         <span>created with</span>
       </p>
-      <a class="u-link" href="https://nicepage.com/" target="_blank">
-        <span>Website Builder Software</span>
+      <a class="u-link" href="https://nicepage.com/static-site-generator" target="_blank">
+        <span>Static Site Generators</span>
       </a>. 
     </section><span style="height: 64px; width: 64px; margin-left: 0px; margin-right: auto; margin-top: 0px; background-image: none; right: 20px; bottom: 20px" class="u-back-to-top u-icon u-icon-circle u-opacity u-opacity-85 u-palette-1-base u-spacing-15" data-href="#">
         <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 551.13 551.13"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-1d98"></use></svg>
