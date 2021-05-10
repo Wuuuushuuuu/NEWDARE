@@ -25,12 +25,8 @@ from django.conf.urls import url
 urlpatterns = [
 
     
-    path("", home_view, name="home"),
-    path("Home/", home_view, name="home"),
-    path('Dentist_Login/', Login_view_dentist, name ="Login"),
-    path('Contact/', Contact_view, name="contact"),
-    path('user_login/', Login_view_client, name ="BK1_Login_client"),
-    path('Regisyer_user/', Register_view, name="Register"),
+    
+    path('Register_user/', Register_view, name="Register"),
     #path("", include("hello.urls")),
     path('admin/', admin.site.urls)
 ]
