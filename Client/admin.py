@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
-from  Client.models import client
+from  Client.models import client, Records
 # Register your models here.
 
 class AccountAdmin(UserAdmin):
@@ -13,3 +13,4 @@ class AccountAdmin(UserAdmin):
     fieldsets = ()
 
 admin.site.register(client, AccountAdmin)
+admin.site.register(Records)

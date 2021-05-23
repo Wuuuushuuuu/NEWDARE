@@ -139,18 +139,19 @@
                       {% csrf_token %}
                       <div class="u-form-group u-form-name">
                         <label for="name-b610" class="u-form-control-hidden u-label">Name</label>
-                        {{form.name}}
+                        <input type="text" placeholder="Enter your Name" id="name-b610" name="name" class="u-border-1 u-border-black u-input u-input-rectangle u-white" required="">
                       </div>
                       <div class="u-form-email u-form-group">
                         <label for="email-b610" class="u-form-control-hidden u-label">Email</label>
-                        {{form.email}}
+                        <input type="email" placeholder="Enter a valid email address" id="email-b610" name="email" class="u-border-1 u-border-black u-input u-input-rectangle u-white" required="">
                       </div>
                       <div class="u-form-group u-form-group-3">
                         <label for="text-e2d1" class="u-form-control-hidden u-label"></label>
-                        {{form.contact_no}}
+                        <input type="text" placeholder="Contact number" id="text-e2d1" name="contact_no" class="u-border-1 u-border-black u-input u-input-rectangle u-white">
                       </div>
                       <div class="u-align-right u-form-group u-form-submit">
-                        <input class="u-btn u-btn-submit u-button-style u-custom-font u-font-playfair-display " type="submit" value="Register Account">
+              
+                        <input type="submit" value="submit">
                       </div>
                     </form>
                   </div>
