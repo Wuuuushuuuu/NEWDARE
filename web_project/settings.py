@@ -38,10 +38,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_truncate',
 
     #Created by jon
     "pages",
     "Dentist_Acct",
+    "Client",
 ]
 
 MIDDLEWARE = [
@@ -72,6 +74,9 @@ TEMPLATES = [
     },
 ]
 
+
+AUTH_USER_MODEL = 'Client.client'
+
 WSGI_APPLICATION = 'web_project.wsgi.application'
 
 
@@ -81,7 +86,7 @@ WSGI_APPLICATION = 'web_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'daredbslive',
+        'NAME': 'LIVE_DBV2',
         'USER': 'dare',
         'PASSWORD': "daremaster",
         'HOST': "dare-dbs.c8fxnwcyffif.ap-southeast-1.rds.amazonaws.com",

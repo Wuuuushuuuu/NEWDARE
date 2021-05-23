@@ -136,26 +136,22 @@
                   </div>
                   <div class="u-form u-form-1">
                     <form action="#" method="POST" class="u-clearfix u-form-spacing-28 u-form-vertical u-inner-form" style="padding: 15px;" source="custom" name="form-1">
+                      {% csrf_token %}
                       <div class="u-form-group u-form-name">
                         <label for="name-b610" class="u-form-control-hidden u-label">Name</label>
-                        <input type="text" placeholder="Enter your Name" id="name-b610" name="name" class="u-border-1 u-border-black u-input u-input-rectangle u-white" required="">
+                        {{form.name}}
                       </div>
                       <div class="u-form-email u-form-group">
                         <label for="email-b610" class="u-form-control-hidden u-label">Email</label>
-                        <input type="email" placeholder="Enter a valid email address" id="email-b610" name="email" class="u-border-1 u-border-black u-input u-input-rectangle u-white" required="">
+                        {{form.email}}
                       </div>
                       <div class="u-form-group u-form-group-3">
                         <label for="text-e2d1" class="u-form-control-hidden u-label"></label>
-                        <input type="text" placeholder="Contact number" id="text-e2d1" name="text" class="u-border-1 u-border-black u-input u-input-rectangle u-white">
+                        {{form.contact_no}}
                       </div>
                       <div class="u-align-right u-form-group u-form-submit">
-                        <a href="#" class="u-btn u-btn-submit u-button-style u-custom-font u-font-playfair-display">Next<br>
-                        </a>
-                        <input type="submit" value="submit" class="u-form-control-hidden">
+                        <input class="u-btn u-btn-submit u-button-style u-custom-font u-font-playfair-display " type="submit" value="Register Account">
                       </div>
-                      <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>
-                      <div class="u-form-send-error u-form-send-message"> Unable to send your message. Please fix errors then try again. </div>
-                      <input type="hidden" value="" name="recaptchaResponse">
                     </form>
                   </div>
                   <a href="{% url 'BK1_Login_client' %}" data-page-id="234728410" class="u-border-1 u-border-active-palette-2-base u-border-hover-palette-1-base u-btn u-button-style u-custom-font u-font-playfair-display u-none u-text-palette-1-base u-btn-2">Si<span style="font-size: 1.125rem;"></span>gn-in instead

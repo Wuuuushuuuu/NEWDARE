@@ -26,18 +26,21 @@ from pages.views import Dentist_Dashboard
 from pages.views import Dentist_Records
 from django.views.generic.base import TemplateView
 from django.conf.urls import url
-from Client_Records import urls
+
+
+
 urlpatterns = [
 
     
     path("", home_view, name="home"),
+    url(r'^home', home_view, name="home"),
     path('Dentist_acct/', Dentist_Acct_View, name="DAV"),
     path("Home/", home_view, name="home"),
     path('Dentist_Login/', Login_view_dentist, name ="Login"),
     path('Contact/', Contact_view, name="contact"),
     path('user_login/', Login_view_client, name ="BK1_Login_client"),
-    path('Regisyer_user/', Register_view, name="Register"),
-    path('C_records/', include('Client_Records.urls')),
+    path('Register_user/', Register_view, name="Register"),
+    #path('C_records/', include('Client_Records.urls')),
     path('Dashboard/',Dentist_Dashboard, name = "DentistDB" ),
     path('Denstist_Appointments/', Dentist_Apnt_View, name= "D_appointments"),
     path('Dentist_records/', Dentist_Records, name="D_records"),
