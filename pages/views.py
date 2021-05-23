@@ -14,6 +14,10 @@ def Login_view_client(request, *args, **kwargs):
      return render(request, "User_Login.html", {})
 
 def Register_view(request, *args, **kwargs):
+     
+
+
+
      return render(request, "Register.html", {})
 
 def Dentist_Acct_View(request, *args, **kwargs):
