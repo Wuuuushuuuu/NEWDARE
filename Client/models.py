@@ -76,3 +76,7 @@ class Bookings(models.Model):
     Date = models.DateField()
     Concern = models.CharField(max_length=60)
     time = models.CharField(max_length=60)
+
+class Logged_in(models.Model):
+    Name = models.CharField(max_length=60)
+    Contact_no = models.CharField(max_length=20)
