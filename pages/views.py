@@ -113,3 +113,9 @@ def BP1(request, *args, **kwargs):
           return redirect('home')
 
      return render(request, "Booking-P2.html", {})
+
+def About(request, *args, **kwargs):
+     return render(request, "About.html", {})
+
+def Service(request, *args, **kwargs):
+     return render(request, "Services.html", {})

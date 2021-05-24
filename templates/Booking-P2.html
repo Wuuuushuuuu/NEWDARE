@@ -33,7 +33,7 @@
     <link rel="canonical" href="index.html">
     <meta property="og:url" content="index.html">
   </head>
-  <body class="u-body"><header class="u-clearfix u-header u-header" id="sec-139f"><div class="u-clearfix u-sheet u-sheet-1">
+   <body class="u-body"><header class="u-clearfix u-header u-header" id="sec-139f"><div class="u-clearfix u-sheet u-sheet-1">
         <a href="https://nicepage.com" class="u-image u-logo u-image-1" data-image-width="500" data-image-height="500">
           <img src="{% static 'images/DARE3.png' %}" class="u-logo-image u-logo-image-1" data-image-width="177.9207">
         </a>
@@ -47,7 +47,7 @@
             </a>
           </div>
           <div class="u-custom-menu u-nav-container">
-            <ul class="u-custom-font u-font-playfair-display u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Home.html">Home</a>
+            <ul class="u-custom-font u-font-playfair-display u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'home' %}">Home</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link">About Us</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="https://www.facebook.com/simbajondentalclinic/about/?ref=page_internal">Dr. Samantha S. Mananghaya</a>
 </li></ul>
 </div>
@@ -89,7 +89,7 @@
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">Veeners</a>
 </li></ul>
 </div>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Contact.html">Contact Us</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'contact' %}">Contact Us</a>
 </li></ul>
           </div>
           <div class="u-custom-menu u-nav-container-collapse">
