@@ -3,25 +3,43 @@ from django.http.response import HttpResponse
 from django.shortcuts import render, redirect
 from django.http import HttpResponseRedirect
 from django.contrib.auth import authenticate, login
+from Dentist_Acct.models import Dentist_Acct
 from Client.models import Records, client, Bookings, Logged_in
-from web_project.forms import SaveClientRecord
+from web_project.forms import SaveClientRecord, ContactForm
 from django.contrib import messages
 from django.shortcuts import redirect
 from django.utils.http import is_safe_url
 from django.conf import settings
+from django.core.mail import send_mail, BadHeaderError
 
 
 
 # Create your views here
 
 def home_view(request, *args, **kwargs):
+
     return render(request, "home.html", {})
 
 def Login_view_dentist(request, *args, **kwargs):
+     if request.method == 'POST':
+          name = request.POST.get('name')
+          password = request.POST.get('Password')
+
+          count = Dentist_Acct.objects.all()
+
+          for obj in count:
+               x = (obj.Username)
+               y = (obj.Password)
+               if(x==name and y==password):
+                    print("success")
+                    return redirect('DentistDB')
+
      return render(request, "Login.html", {})
 
 def Contact_view(request, *args, **kwargs):
-     return render(request, "Contact.html")
+     return render(request, "Contact.html",  {})
+
+
 
 def home_view2():
     return render("home.html", {})

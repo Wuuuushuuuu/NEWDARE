@@ -41,12 +41,20 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_truncate',
     'corsheaders',
+    'keyboard_shortcuts',
 
     #Created by jon
     "pages",
     "Dentist_Acct",
     "Client",
 ]
+
+HOTKEYS = [
+            {'keys': 'g + h',  # go home
+            'link': "/Dentist_Login/",
+            }
+]
+SPECIAL_DISABLED = True
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
