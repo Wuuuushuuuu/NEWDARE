@@ -20,17 +20,36 @@ from pages.views import Login_view_dentist
 from pages.views import Contact_view
 from pages.views import Login_view_client
 from pages.views import Register_view
+from pages.views import Dentist_Acct_View
+from pages.views import Dentist_Apnt_View
+from pages.views import Dentist_Dashboard
+from pages.views import Dentist_Records
+from pages.views import About, Service
+from pages.views import BP1
 from django.views.generic.base import TemplateView
 from django.conf.urls import url
+
+
+
 urlpatterns = [
 
     
     path("", home_view, name="home"),
+    url(r'^home', home_view, name="home"),
+    path('Dentist_acct/', Dentist_Acct_View, name="DAV"),
     path("Home/", home_view, name="home"),
     path('Dentist_Login/', Login_view_dentist, name ="Login"),
     path('Contact/', Contact_view, name="contact"),
     path('user_login/', Login_view_client, name ="BK1_Login_client"),
-    path('Regisyer_user/', Register_view, name="Register"),
-    #path("", include("hello.urls")),
+    path('user_login/Home/', Login_view_client, name ="BK1_Login_client"),
+    path('Register_user/', Register_view, name="Register"),
+    path('book_select/', BP1, name = "Book_type"),
+    #path('C_records/', include('Client_Records.urls')),
+    path('Dashboard/',Dentist_Dashboard, name = "DentistDB" ),
+    path('Denstist_Appointments/', Dentist_Apnt_View, name= "D_appointments"),
+    path('Dentist_records/', Dentist_Records, name="D_records"),
+    path('Services/', Service, name="Service"),
+    path('About/',About, name = "About"),
     path('admin/', admin.site.urls)
+   
 ]
