@@ -3,14 +3,17 @@ from django.http.response import HttpResponse
 from django.shortcuts import render, redirect
 from django.http import HttpResponseRedirect
 from django.contrib.auth import authenticate, login
-from Client.models import Records, client
+from Client.models import Records, client, Bookings
 from web_project.forms import SaveClientRecord
 from django.contrib import messages
 from django.shortcuts import redirect
 from django.utils.http import is_safe_url
 from django.conf import settings
 
-# Create your views here.
+
+
+# Create your views here
+
 def home_view(request, *args, **kwargs):
     return render(request, "home.html", {})
 
@@ -24,8 +27,12 @@ def home_view2():
     return render("home.html", {})
 
 def check_user(name, contact_no):
-     name = name
-     contact_no = contact_no
+     Name = name
+     Contact_no = contact_no
+     list =[]
+     list.append(Name)
+     list.append(Contact_no)
+     return list
 
 
 def redirect_after_login(request):
@@ -53,6 +60,10 @@ def Login_view_client(request):
                x = (obj.name)
                y = (obj.contact_no)
                if(x==name and y==contact_no):
+                    global Client_name 
+                    global Client_number
+                    Client_name = x
+                    Client_number = y
                     check_user(x,y)
                     print("success")
                     return redirect('Book_type')
@@ -91,4 +102,12 @@ def Dentist_Records(request, *args, **kwargs):
      return render(request, "Records.html", {})
 
 def BP1(request, *args, **kwargs):
-     return render(request, "Booking-P1.html", {})
+     if request.method == 'POST':
+          date = request.POST['date']
+          concerns = request.POST['select']
+          time = request.POST['radiobutton']
+          record =  Bookings(Name = "Jon", Contact_no = "09156464682", Date = date, Concern = concerns, time = time)
+          record.save()
+          return redirect('home')
+
+     return render(request, "Booking-P2.html", {})

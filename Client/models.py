@@ -69,3 +69,10 @@ class Records(models.Model):
     Name = models.CharField(max_length=60)
     Email = models.EmailField()
     Contact_no = models.CharField(max_length=20)
+
+class Bookings(models.Model):
+    Name = models.CharField(max_length=60)
+    Contact_no = models.CharField(max_length=20)
+    Date = models.DateField()
+    Concern = models.CharField(max_length=60)
+    time = models.CharField(max_length=60)
