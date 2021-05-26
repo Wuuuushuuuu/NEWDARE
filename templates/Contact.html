@@ -75,7 +75,7 @@
             </a>
           </div>
           <div class="u-custom-menu u-nav-container">
-            <ul class="u-custom-font u-font-playfair-display u-nav u-unstyled u-nav-5"><li class="u-nav-item"><a class="u-button-style u-nav-link">Services</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-6"><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">Check up and consultation</a>
+            <ul class="u-custom-font u-font-playfair-display u-nav u-unstyled u-nav-5"><li class="u-nav-item"><a class="u-button-style u-nav-link" href = "{% url 'Service' %}">Services</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-6"><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">Check up and consultation</a>
             </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">Oral propylaxis</a>
             </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">Tooth restoration</a>
             </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-white">Tooth extraction</a>
@@ -150,7 +150,8 @@
               <div class="u-container-style u-layout-cell u-right-cell u-size-20 u-layout-cell-3">
                 <div class="u-container-layout u-valign-top u-container-layout-3">
                   <div class="u-expanded-width u-form u-form-1">
-                    <form action="#" method="POST" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" style="padding: 0;" source="custom" name="form">
+                    <form action="{% static 'scripts/form-carousel_d2da.php' %}" method="POST" class="u-clearfix u-form-spacing-28 u-form-vertical u-inner-form" style="padding: 10px" source="customphp" name="form" redirect="true" redirect-url="54254606" redirect-address="Home.html">
+                      {% csrf_token %}
                       <div class="u-form-group u-form-name">
                         <label for="name-daf4" class="u-form-control-hidden u-label">Name</label>
                         <input type="text" placeholder="Enter your Name" id="name-daf4" name="name" class="u-input u-input-rectangle u-white" required="">

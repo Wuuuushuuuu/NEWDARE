@@ -54,7 +54,7 @@ ROOT_URLCONF = 'proj.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, "templates")],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -76,16 +76,16 @@ WSGI_APPLICATION = 'proj.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'NAME_OF_DB',
-        'USER': 'DB_USER_NAME',
-        'PASSWORD': 'DB_PASSWORD',
+        'NAME': 'customer',
+        'USER': 'postgres',
+        'PASSWORD': '1234',
         'HOST': 'localhost',
-        'PORT': 'PORT_NUMBER',
+        'PORT': '5432',
     }
 }
 
 
-# Password validation
+# Password validation'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [

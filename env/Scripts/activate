@@ -37,7 +37,11 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
+<<<<<<< HEAD
+VIRTUAL_ENV="C:\Users\Admin\Documents\GitHub\LBYCPD2_DARE\env"
+=======
 VIRTUAL_ENV="C:\Users\asus\Documents\GitHub\LBYCPD2_DARE\env"
+>>>>>>> fb6ee2b78e50819a7f86bdf1347f0a6e2b8fb168
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

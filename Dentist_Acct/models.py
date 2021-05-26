@@ -5,4 +5,3 @@ class Dentist_Acct(models.Model):
     Name = models.TextField()
     Username = models.TextField()
     Password = models.TextField()
-    Clients = models.TextField()
