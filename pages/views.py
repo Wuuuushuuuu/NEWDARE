@@ -5,7 +5,7 @@ from django.http import HttpResponseRedirect
 from django.contrib.auth import authenticate, login
 from Dentist_Acct.models import Dentist_Acct
 from Client.models import Records, client, Bookings, Logged_in
-from web_project.forms import SaveClientRecord, ContactForm
+from web_project.forms import SaveClientRecord, ContactForm, UpdateForm
 from django.contrib import messages
 from django.shortcuts import redirect
 from django.utils.http import is_safe_url
@@ -151,3 +151,17 @@ def About(request, *args, **kwargs):
 
 def Service(request, *args, **kwargs):
      return render(request, "Services.html", {})
+
+
+def updateAppointment(request, pk):
+     order = Bookings.objects.get(id =pk)
+     form  = UpdateForm(instance = order)
+
+     if request.method == 'POST':
+          form = UpdateForm(request.POST, instance=order)
+          if form.is_valid():
+               form.save()
+               return redirect('DentistDB')
+     
+     context ={'form':form}
+     return render(request,"UpdateForm.html", context)
