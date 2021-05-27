@@ -11,7 +11,8 @@ from django.shortcuts import redirect
 from django.utils.http import is_safe_url
 from django.conf import settings
 from django.core.mail import send_mail, BadHeaderError
-
+from datetime import datetime as dt
+import datetime
 
 
 # Create your views here
@@ -105,13 +106,26 @@ def Register_view(request):
      return render(request, "Register.html", context)
 
 def Dentist_Acct_View(request, *args, **kwargs):
-     return render(request, "Account.html", {})
+     Account = Dentist_Acct.objects.get(id=1)
+     print(Account.Name)
+     return render(request, "Account.html", {'Account': Account})
 
 def Dentist_Apnt_View(request, *args, **kwargs):
-     return render(request, "Appointments.html", {})
+     books = Bookings.objects.all()
+     return render(request, "Appointments-2.html", {'books':books})
 
 def Dentist_Dashboard(request, *args, **kwargs):
-     return render(request, "Main-Dashboard.html", {})
+     Pending = Bookings.objects.filter(Status = "Pending").count()
+     Confimred = Bookings.objects.filter(Status = "CONFIRMED").count()
+     date_today = (datetime.date.today())
+     Date = Bookings.objects.filter(Date = date_today).count()
+
+     context = {
+          'Pending':Pending,
+          'Confirmed':Confimred,
+          'Date':Date
+     }
+     return render(request, "Dentist-Dashboard.html", context)
 
 def Dentist_Records(request, *args, **kwargs):
      return render(request, "Records.html", {})

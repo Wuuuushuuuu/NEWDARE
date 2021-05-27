@@ -70,12 +70,19 @@ class Records(models.Model):
     Email = models.EmailField()
     Contact_no = models.CharField(max_length=20)
 
+COLOR_CHOICES = (
+    ('PENDING','Pending'),
+    ('CONFIRMED', 'Confirmed'),
+)
+
+
 class Bookings(models.Model):
     Name = models.CharField(max_length=60)
     Contact_no = models.CharField(max_length=20)
     Date = models.DateField()
     Concern = models.CharField(max_length=60)
     time = models.CharField(max_length=60)
+    Status = models.CharField(max_length=30, choices=COLOR_CHOICES, default='Pending')
 
 class Logged_in(models.Model):
     Name = models.CharField(max_length=60)

@@ -51,5 +51,7 @@ urlpatterns = [
     path('Services/', Service, name="Service"),
     path('About/',About, name = "About"),
     path('admin/', admin.site.urls)
+
+    
    
 ]
