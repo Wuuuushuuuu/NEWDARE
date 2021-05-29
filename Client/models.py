@@ -71,8 +71,8 @@ class Records(models.Model):
     Contact_no = models.CharField(max_length=20)
 
 COLOR_CHOICES = (
-    ('PENDING','Pending'),
-    ('CONFIRMED', 'Confirmed'),
+    ('Pending','Pending'),
+    ( 'Confirmed','Confirmed'),
 )
 
 

@@ -23,4 +23,11 @@ class ContactForm(forms.Form):
 class UpdateForm(ModelForm):
     class Meta:
         model = Bookings
-        fields = '__all__'
+        fields = {'Name', 'Contact_no', 'Date','Concern','time','Status'}
+        widgets = {
+            'Name': forms.TextInput(attrs={'size':50}),
+            'Contact_no': forms.TextInput(attrs={ 'size':50}),
+            'Date': forms.TextInput(attrs={ 'size':50}),
+            'Concern': forms.TextInput(attrs={ 'size':50}),
+            'time': forms.TextInput(attrs={ 'size':50}),
+         }

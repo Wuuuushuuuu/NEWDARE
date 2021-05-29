@@ -116,8 +116,9 @@ def Dentist_Apnt_View(request, *args, **kwargs):
 
 def Dentist_Dashboard(request, *args, **kwargs):
      Pending = Bookings.objects.filter(Status = "Pending").count()
-     Confimred = Bookings.objects.filter(Status = "CONFIRMED").count()
+     Confimred = Bookings.objects.filter(Status = "Confirmed").count()
      date_today = (datetime.date.today())
+     print(date_today)
      Date = Bookings.objects.filter(Date = date_today).count()
 
      context = {
@@ -132,17 +133,29 @@ def Dentist_Records(request, *args, **kwargs):
 
 def BP1(request, *args, **kwargs):
      if request.method == 'POST':
-          date = request.POST['date']
+          date2 = request.POST['date']
           concerns = request.POST['select']
-          time = request.POST['radiobutton']
-          logs =  Logged_in.objects.all()
-          for obj in  Logged_in.objects.all():
-               x = obj.Name
-               y = obj.Contact_no
-          record =  Bookings(Name = x, Contact_no = y, Date = date, Concern = concerns, time = time)
-          record.save()
-          logs.delete()
-          return redirect('home')
+          time2 = request.POST['radiobutton']
+          check_date = Bookings.objects.filter(Date = date2).filter(time = time2).exists()
+          print(check_date)
+          
+          
+          print('test1')
+          if((check_date == False)):
+               print('test2')
+               logs =  Logged_in.objects.all()
+               for obj in  Logged_in.objects.all():
+                    x = obj.Name
+                    y = obj.Contact_no
+               record =  Bookings(Name = x, Contact_no = y, Date = date2, Concern = concerns, time = time2)
+               record.save()
+               messages.success(request, "Appointment Saved!")
+               logs.delete()
+               return redirect('home')
+          else:
+               print('test3')
+               return redirect('Book_type')
+
 
      return render(request, "Booking-P2.html", {})
 
@@ -165,3 +178,12 @@ def updateAppointment(request, pk):
      
      context ={'form':form}
      return render(request,"UpdateForm.html", context)
+
+def deleteBooking(request, pk):
+     order = Bookings.objects.get(id =pk)
+     if request.method == 'POST':
+          order.delete()
+          return redirect('D_appointments')
+
+     context= {'Appointment': order}
+     return render(request, 'delete.html', context)

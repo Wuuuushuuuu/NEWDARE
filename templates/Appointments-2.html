@@ -112,7 +112,7 @@
                       <col width="16.6%">
                       <col width="16.6%">
                       <col width="16.6%">
-                      <col width="16.6%">
+                      <col width="20.6%">
                       <col width="22.6%">
                       <col width="13.7%">
                       <col width="13.9%">
@@ -138,8 +138,8 @@
                         <td>{{obj.time}} </td>
                         <td>{{obj.Concern}} </td>
                         <td>{{obj.Status}} </td>
-                        <td><a href="{% url 'UpdateApp' obj.id %}" class="btn btn-danger" role="button">Update</a></td>
-                        <td><a  class="btn btn-body-1 btn-danger" href="">Remove</a></td>
+                        <td><a href="{% url 'UpdateApp' obj.id %}" class="u-btn u-btn-submit u-button-style u-custom-font u-font-playfair-display u-palette-1-base u-btn-1">Update</a></td>
+                        <td><a  class="u-btn u-btn-submit u-button-style u-custom-font u-font-playfair-display u-palette-2-base u-btn-1" href="{% url 'DeleteApp' obj.id %}">Remove</a></td>
                       </tr>
                     {% endfor %}
                     </tbody>
