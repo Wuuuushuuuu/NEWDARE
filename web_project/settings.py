@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     "Dentist_Acct",
     "Client",
     'django_filters',
+    'storages',
 ]
 
 HOTKEYS = [
@@ -159,3 +160,12 @@ STATICFILES_DIRS =[
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+AWS_ACCESS_KEY_ID = 'AKIARP6YUZKRIDJGJWP4'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = 'daremaster'
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL = None
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
