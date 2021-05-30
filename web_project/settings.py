@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'keyboard_shortcuts',
+   
 
     #Created by jon
     "pages",
@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     "Client",
     'django_filters',
     'storages',
+     'keyboard_shortcuts',
 ]
 
 HOTKEYS = [
