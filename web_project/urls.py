@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
-from pages.views import home_view
+from pages.views import deleteClient, home_view
 from pages.views import Login_view_dentist
 from pages.views import Contact_view
 from pages.views import Login_view_client
@@ -24,7 +24,7 @@ from pages.views import Dentist_Acct_View
 from pages.views import Dentist_Apnt_View
 from pages.views import Dentist_Dashboard
 from pages.views import Dentist_Records
-from pages.views import About, Service, updateAppointment, deleteBooking
+from pages.views import About, Service, updateAppointment, deleteBooking, deleteClient
 from pages.views import BP1
 from django.views.generic.base import TemplateView
 from django.conf.urls import url
@@ -51,7 +51,8 @@ urlpatterns = [
     path('Services/', Service, name="Service"),
     path('About/',About, name = "About"),
     path('update_appointment/<str:pk>/',updateAppointment, name = "UpdateApp"),
-     path('delete_appointment/<str:pk>/',deleteBooking, name = "DeleteApp"),
+    path('delete_appointment/<str:pk>/',deleteBooking, name = "DeleteApp"),
+    path('delete_client_record/<str:pk>/',deleteClient, name = "DeleteClient"),
     path('admin/', admin.site.urls)
 
     

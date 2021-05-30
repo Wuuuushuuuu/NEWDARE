@@ -1,4 +1,5 @@
 from django.contrib.messages.api import success
+from django.db.models.query import QuerySet
 from django.http.response import HttpResponse
 from django.shortcuts import render, redirect
 from django.http import HttpResponseRedirect
@@ -136,8 +137,15 @@ def Dentist_Dashboard(request, *args, **kwargs):
      }
      return render(request, "Dentist-Dashboard.html", context)
 
-def Dentist_Records(request, *args, **kwargs):
-     return render(request, "Records.html", {})
+def Dentist_Records(request):
+     clients = client.objects.all()
+     #client_all = client.objects.get(id=pk_test)
+     #records = client_all.order_set.all()
+
+     myFilter = ClientFilter(request.GET, queryset = clients)
+     clients = myFilter.qs
+     #records = myFilter.qs
+     return render(request, "Records.html",  {'client':clients, 'Filter':myFilter})
 
 def BP1(request, *args, **kwargs):
      if request.method == 'POST':
@@ -195,3 +203,12 @@ def deleteBooking(request, pk):
 
      context= {'Appointment': order}
      return render(request, 'delete.html', context)
+
+def deleteClient(request, pk):
+     order = client.objects.get(id =pk)
+     if request.method == 'POST':
+          order.delete()
+          return redirect('D_records')
+
+     context= {'Appointment': order}
+     return render(request, 'deleteClient.html', context)
