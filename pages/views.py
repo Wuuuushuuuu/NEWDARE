@@ -13,6 +13,7 @@ from django.conf import settings
 from django.core.mail import send_mail, BadHeaderError
 from datetime import datetime as dt
 import datetime
+from Client.filters import ClientFilter
 
 
 # Create your views here
@@ -97,8 +98,15 @@ def Register_view(request):
      if request.method =='POST':
           print(request.method)
           if form.is_valid():
-               form.save()
-               return redirect('BK1_Login_client')
+               Name = request.POST['name']
+               Email = request.POST['email']
+               Contact = request.POST['contact_no']
+               check_date = client.objects.filter(name = Name).filter(email = Email).filter(contact_no = Contact).exists()
+               if check_date==False:
+                    form.save()
+                    return redirect('BK1_Login_client')
+               else:
+                    return redirect('Register')
 
           
 
