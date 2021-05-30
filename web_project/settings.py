@@ -47,7 +47,7 @@ INSTALLED_APPS = [
     "Client",
     
     
-    'keyboard_shortcuts',
+    #'keyboard_shortcuts',
 ]
 
 HOTKEYS = [
