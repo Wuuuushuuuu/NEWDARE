@@ -51,10 +51,10 @@ color: Black;
 #example {
 color: #0000ff;
 }
-
+  
       </style>
   </head>
-  <body class="u-body"><header class="u-clearfix u-header u-valign-middle u-header" id="sec-139f"><a href="https://nicepage.com" class="u-image u-logo u-image-1" data-image-width="500" data-image-height="500">
+  <body class="u-body"><header class="u-clearfix u-header u-valign-middle u-header" id="sec-139f"><a href="#" class="u-image u-logo u-image-1" data-image-width="500" data-image-height="500">
         <img src="{% static 'images/DARE3.png' %}" class="u-logo-image u-logo-image-1" data-image-width="177.9207">
       </a></header>
     <section class="u-clearfix u-section-1" id="sec-6bd8">
@@ -136,6 +136,7 @@ color: #0000ff;
                       <form method ="get">
                       {{Filter.form}}
                         <button class ="u-btn u-btn-submit u-button-style u-custom-font u-font-playfair-display u-palette-1-base u-btn-1" type = "submit">Search</button>
+                        <p>Create an Invoice Slip</p> <a href="{% url 'client_invoice' %}" class="u-btn u-btn-submit u-button-style u-custom-font u-font-playfair-display u-palette-1-base u-btn-1">Invoice</a>
                       </form>
                     </div>
                   </div>
@@ -149,14 +150,12 @@ color: #0000ff;
                       <col width="16.6%">
                       <col width="16.6%">
                       <col width="13.7%">
-                      <col width="13.9%">
                     </colgroup>
                     <thead class="u-black u-table-header u-table-header-1">
                       <tr style="height: 53px;">
                         <th class="u-border-1 u-border-black u-custom-font u-font-playfair-display u-table-cell">Client</th>
                         <th class="u-border-1 u-border-black u-custom-font u-font-playfair-display u-table-cell">Phone Number</th>
                         <th class="u-border-1 u-border-black u-custom-font u-font-playfair-display u-table-cell">Email</th>
-                        <th class="u-border-1 u-border-black u-custom-font u-font-playfair-display u-table-cell">CHARGE</th>
                         <th class="u-border-1 u-border-black u-custom-font u-font-playfair-display u-table-cell">REMOVE</th>
                       </tr>
                     </thead>
@@ -166,7 +165,6 @@ color: #0000ff;
                         <td>{{obj.name}} </td>
                         <td>{{obj.contact_no}} </td>
                         <td>{{obj.email}} </td>
-                        <td><a href="#" class="u-btn u-btn-submit u-button-style u-custom-font u-font-playfair-display u-palette-1-base u-btn-1">Invoice</a></td>
                         <td><a  class="u-btn u-btn-submit u-button-style u-custom-font u-font-playfair-display u-palette-2-base u-btn-1" href="{% url 'DeleteClient' obj.id %}">Remove</a></td>
                       </tr>
                     {% endfor %}
