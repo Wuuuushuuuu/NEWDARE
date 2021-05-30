@@ -1,7 +1,7 @@
 from django.forms import ModelForm
 from Client.models import client
 from django import forms
-from Client.models import Bookings
+from Client.models import Bookings, Invoice
 
 
 class SaveClientRecord(ModelForm):
@@ -30,4 +30,15 @@ class UpdateForm(ModelForm):
             'Date': forms.TextInput(attrs={ 'size':50}),
             'Concern': forms.TextInput(attrs={ 'size':50}),
             'time': forms.TextInput(attrs={ 'size':50}),
+         }
+
+class InvoiceForm(ModelForm):
+    class Meta:
+        model = Invoice
+        fields = {'Name', 'Contact_no', 'Date','Concern','Amount_Due'}
+        widgets = {
+            'Name': forms.TextInput(attrs={'placeholder': 'Name','size':50}),
+            'Contact_no': forms.TextInput(attrs={'placeholder': 'Contact Number', 'size':50}),
+            'Date':forms.TextInput(attrs={'placeholder':'MM/DD/YY', 'size':50}),
+            'Amount_Due': forms.TextInput(attrs={'placeholder': 'Amount Due', 'size':50}),
          }

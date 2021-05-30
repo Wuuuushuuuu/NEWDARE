@@ -98,7 +98,7 @@ WSGI_APPLICATION = 'web_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'LIVE_DBV2',
+        'NAME': 'LIVE_DB5',
         'USER': 'dare',
         'PASSWORD': "daremaster",
         'HOST': "dare-dbs.c8fxnwcyffif.ap-southeast-1.rds.amazonaws.com",

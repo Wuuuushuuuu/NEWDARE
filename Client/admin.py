@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
-from  Client.models import client, Records, Bookings, Logged_in
+from  Client.models import client, Records, Bookings, Logged_in, Invoice
 # Register your models here.
 
 class AccountAdmin(UserAdmin):
@@ -16,3 +16,4 @@ admin.site.register(client, AccountAdmin)
 admin.site.register(Records)
 admin.site.register(Bookings)
 admin.site.register(Logged_in)
+admin.site.register(Invoice)

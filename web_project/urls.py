@@ -24,7 +24,7 @@ from pages.views import Dentist_Acct_View
 from pages.views import Dentist_Apnt_View
 from pages.views import Dentist_Dashboard
 from pages.views import Dentist_Records
-from pages.views import About, Service, updateAppointment, deleteBooking, deleteClient
+from pages.views import About, Service, updateAppointment, deleteBooking, deleteClient, Invoices
 from pages.views import BP1
 from django.views.generic.base import TemplateView
 from django.conf.urls import url
@@ -53,6 +53,7 @@ urlpatterns = [
     path('update_appointment/<str:pk>/',updateAppointment, name = "UpdateApp"),
     path('delete_appointment/<str:pk>/',deleteBooking, name = "DeleteApp"),
     path('delete_client_record/<str:pk>/',deleteClient, name = "DeleteClient"),
+    path('Client_invoice/',Invoices, name = "client_invoice"),
     path('admin/', admin.site.urls)
 
     

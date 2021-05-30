@@ -5,8 +5,8 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponseRedirect
 from django.contrib.auth import authenticate, login
 from Dentist_Acct.models import Dentist_Acct
-from Client.models import Records, client, Bookings, Logged_in
-from web_project.forms import SaveClientRecord, ContactForm, UpdateForm
+from Client.models import Records, client, Bookings, Logged_in, Invoice
+from web_project.forms import SaveClientRecord, ContactForm, UpdateForm, InvoiceForm
 from django.contrib import messages
 from django.shortcuts import redirect
 from django.utils.http import is_safe_url
@@ -14,6 +14,8 @@ from django.conf import settings
 from django.core.mail import send_mail, BadHeaderError
 from datetime import datetime as dt
 import datetime
+from django.views.generic import View
+from django.utils import timezone
 from Client.filters import ClientFilter
 
 
@@ -212,3 +214,15 @@ def deleteClient(request, pk):
 
      context= {'Appointment': order}
      return render(request, 'deleteClient.html', context)
+
+def Invoices(request):
+     form = InvoiceForm()
+     if request.method == 'POST':
+          form = InvoiceForm(request.POST)
+          if form.is_valid():
+               form.save()
+               return redirect('D_records')
+     
+     context ={'form':form}
+     return render(request,"invoice.html", context)
+
