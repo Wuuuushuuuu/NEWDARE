@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     "pages",
     "Dentist_Acct",
     "Client",
+    'django_filters',
 ]
 
 HOTKEYS = [
