@@ -70,13 +70,40 @@ class Records(models.Model):
     Email = models.EmailField()
     Contact_no = models.CharField(max_length=20)
 
+COLOR_CHOICES = (
+    ('Pending','Pending'),
+    ( 'Confirmed','Confirmed'),
+)
+
+CONCERNS = (
+    ('Concerns','Concerns'),
+    ( 'General Check-Up','General Check-Up'),
+    ( 'Oral Prophylaxis','Oral Prophylaxis'),
+    ( 'Tooth Restoration','Tooth Restoration'),
+    ( 'Tooth Extraction','Tooth Extraction'),
+    ( 'Odontectomy','Odontectomy'),
+    ( 'Root Canal Treatment','Root Canal Treatment'),
+    ( 'Full and Partial Dentures','Full and Partial Dentures'),
+    ( 'Fixed Bridge','Fixed Bridge'),
+    ( 'Veneers','Veneers'),
+    ( 'Jacket Crowns','Jacket Crowns'),
+)
+
 class Bookings(models.Model):
     Name = models.CharField(max_length=60)
     Contact_no = models.CharField(max_length=20)
     Date = models.DateField()
     Concern = models.CharField(max_length=60)
     time = models.CharField(max_length=60)
+    Status = models.CharField(max_length=30, choices=COLOR_CHOICES, default='Pending')
 
 class Logged_in(models.Model):
     Name = models.CharField(max_length=60)
     Contact_no = models.CharField(max_length=20)
+
+class Invoice(models.Model):
+    Name = models.CharField(max_length=60)
+    Contact_no = models.CharField(max_length=20)
+    Date = models.DateField()
+    Concern = models.CharField(max_length=60, choices = CONCERNS, default = "Concerns")
+    Amount_Due = models.CharField(max_length=20,  default='0.0')

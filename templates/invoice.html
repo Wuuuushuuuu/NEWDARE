@@ -1,0 +1,172 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    <title>Invoice</title>
+    <link rel="stylesheet" href="{% static 'nicepage9.css' %}" media="screen">
+<link rel="stylesheet" href="{% static 'UpdateForm.css' %}" media="screen">
+    <script class="u-script" type="text/javascript" src="{% static 'jquery.js' %}" defer=""></script>
+    <script class="u-script" type="text/javascript" src="{% static 'nicepage.js' %}" defer=""></script>
+    <meta name="generator" content="Nicepage 3.12.1, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
+    
+    
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "Site1",
+		"url": "index.html",
+		"logo": "images/DARE3.png"
+}</script>
+    <meta property="og:title" content="UpdateForm">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#478ac9">
+    <link rel="canonical" href="index.html">
+    <meta property="og:url" content="index.html">
+    <style>
+      ::placeholder {
+        color: black;
+        opacity: 1; /* Firefox */
+      }
+      
+      :-ms-input-placeholder { /* Internet Explorer 10-11 */
+       color: black;
+      }
+      
+      ::-ms-input-placeholder { /* Microsoft Edge */
+       color: black;
+      }
+
+      input, select, textarea {
+color: Black;
+}
+#example {
+color: #0000ff;
+}
+
+      </style>
+  </head>
+  <body class="u-body"><header class="u-clearfix u-header u-valign-middle u-header" id="sec-139f"><a href="https://nicepage.com" class="u-image u-logo u-image-1" data-image-width="500" data-image-height="500">
+        <img src="{% static 'images/DARE3.png' %}" class="u-logo-image u-logo-image-1" data-image-width="177.9207">
+      </a></header>
+    <section class="u-clearfix u-valign-middle u-section-1" id="sec-6bd8">
+      <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
+        <div class="u-layout">
+          <div class="u-layout-row">
+            <div class="u-container-style u-layout-cell u-shape-rectangle u-size-8 u-layout-cell-1">
+              <div class="u-container-layout u-container-layout-1">
+                <div alt="" class="u-image u-image-circle u-image-1" data-image-width="1536" data-image-height="2048"></div>
+                <img src="{% static 'images/sam1.jpg' %}" alt="" class="u-image u-image-circle u-image-1" data-href="{% url 'DAV' %}" data-image-width="1200" data-image-height="1600">
+                <p class="u-custom-font u-font-playfair-display u-text u-text-1">Account</p><span class="u-icon u-icon-circle u-text-palette-1-base u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-9b1b"></use></svg><svg class="u-svg-content" viewBox="0 0 512 512" id="svg-9b1b"><g><path d="m436.985 110.324c-48.377-48.373-112.652-75.013-180.985-75.013s-132.608 26.64-180.985 75.014c-5.859 5.859-5.852 15.36 0 21.213l45.434 45.437c5.859 5.859 15.362 5.853 21.215-.001 30.556-30.564 71.162-47.397 114.336-47.397s83.78 16.833 114.337 47.396c2.813 2.813 6.629 4.395 10.607 4.395 6.482 0 10.295-4.081 10.607-4.394l45.434-45.437c5.859-5.858 5.853-15.36 0-21.213z" fill="#ffe600"></path><path d="m436.985 110.324c-48.377-48.373-112.652-75.013-180.985-75.013v94.267c43.174 0 83.78 16.833 114.337 47.396 2.813 2.813 6.629 4.395 10.607 4.395 6.482 0 10.295-4.081 10.607-4.394l45.434-45.437c5.859-5.859 5.853-15.361 0-21.214z" fill="#ffaa32"></path><path d="m141.662 405.646c-12.906-12.905-47.17-51.068-47.395-114.367.008-43.157 16.839-83.75 47.395-114.303l-66.647-66.651c-48.374 48.37-75.015 112.646-75.015 180.986s26.641 132.616 75.015 180.986c2.929 2.929 6.767 4.393 10.606 4.393s7.678-1.465 10.607-4.394l45.434-45.437c5.858-5.858 5.858-15.355 0-21.213z" fill="#9bff00"></path><path d="m370.338 405.646c12.906-12.905 47.17-51.068 47.395-114.367-.008-43.157-16.839-83.75-47.395-114.303l66.647-66.651c48.374 48.37 75.015 112.646 75.015 180.986s-26.641 132.616-75.015 180.986c-2.929 2.929-6.767 4.393-10.606 4.393s-7.678-1.465-10.607-4.394l-45.434-45.437c-5.858-5.858-5.858-15.355 0-21.213z" fill="#ff1e5a"></path><path d="m94.267 291.279c.008-43.157 16.839-83.75 47.395-114.303l-66.647-66.651c-48.374 48.37-75.015 112.646-75.015 180.986z" fill="#00d200"></path><path d="m370.338 405.646c12.906-12.905 47.17-51.068 47.395-114.367l94.267.032c0 68.34-26.641 132.616-75.015 180.986-2.929 2.929-6.767 4.393-10.606 4.393s-7.678-1.465-10.607-4.394l-45.434-45.437c-5.858-5.858-5.858-15.355 0-21.213z" fill="#c40050"></path><path d="m222.673 257.977c-18.377 18.377-18.377 48.279 0 66.657 23.216 23.216 137.311 96.066 150.245 104.296 5.931 3.775 13.688 2.923 18.66-2.048 4.971-4.971 5.823-12.728 2.048-18.66-8.23-12.933-81.08-127.029-104.296-150.245-18.377-18.377-48.279-18.377-66.657 0z" fill="#003c50"></path><path d="m222.673 257.977 168.904 168.904c4.971-4.971 5.823-12.728 2.048-18.66-8.23-12.933-81.08-127.029-104.296-150.245-18.376-18.376-48.278-18.376-66.656.001z" fill="#001428"></path>
+</g></svg></span>
+                <p class="u-custom-font u-font-playfair-display u-text u-text-2">Dashboard</p><span class="u-icon u-icon-circle u-text-palette-1-base u-icon-2"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-f0e3"></use></svg><svg class="u-svg-content" viewBox="0 0 512 512" id="svg-f0e3"><g><g><path d="m246.23 426.666h-195.039c-18.851 0-34.132-15.282-34.132-34.132v-34.134h261.957z" fill="#d3dcfb"></path><path d="m460.825 153.6v143.398 95.534h-409.634c-18.851 0-34.132-15.282-34.132-34.133v-204.799l238.95-85.334z" fill="#ebf5fc"></path><g fill="#3c58a0"><path d="m77.336 221.867h-18.133c-4.418 0-8-3.582-8-8v-18.133c0-4.418 3.582-8 8-8h18.133c4.418 0 8 3.582 8 8v18.133c0 4.418-3.582 8-8 8z"></path><path d="m145.603 221.867h-18.133c-4.418 0-8-3.582-8-8v-18.133c0-4.418 3.582-8 8-8h18.133c4.418 0 8 3.582 8 8v18.133c0 4.418-3.582 8-8 8z"></path><path d="m213.869 221.867h-18.133c-4.418 0-8-3.582-8-8v-18.133c0-4.418 3.582-8 8-8h18.133c4.418 0 8 3.582 8 8v18.133c0 4.418-3.581 8-8 8z"></path><path d="m282.136 221.867h-18.133c-4.418 0-8-3.582-8-8v-18.133c0-4.418 3.582-8 8-8h18.133c4.418 0 8 3.582 8 8v18.133c0 4.418-3.582 8-8 8z"></path><path d="m350.391 221.867h-18.133c-4.418 0-8-3.582-8-8v-18.133c0-4.418 3.582-8 8-8h18.133c4.418 0 8 3.582 8 8v18.133c0 4.418-3.581 8-8 8z"></path><path d="m418.658 221.867h-18.133c-4.418 0-8-3.582-8-8v-18.133c0-4.418 3.582-8 8-8h18.133c4.418 0 8 3.582 8 8v18.133c0 4.418-3.582 8-8 8z"></path><path d="m77.336 290.133h-18.133c-4.418 0-8-3.582-8-8v-18.133c0-4.418 3.582-8 8-8h18.133c4.418 0 8 3.582 8 8v18.133c0 4.419-3.582 8-8 8z"></path><path d="m145.603 290.133h-18.133c-4.418 0-8-3.582-8-8v-18.133c0-4.418 3.582-8 8-8h18.133c4.418 0 8 3.582 8 8v18.133c0 4.419-3.582 8-8 8z"></path><path d="m213.869 290.133h-18.133c-4.418 0-8-3.582-8-8v-18.133c0-4.418 3.582-8 8-8h18.133c4.418 0 8 3.582 8 8v18.133c0 4.419-3.581 8-8 8z"></path><path d="m290.136 290.133v-25.6c0-4.713-3.82-8.533-8.533-8.533h-17.067c-4.713 0-8.533 3.82-8.533 8.533v17.067c0 4.713 3.821 8.533 8.533 8.533z"></path><path d="m77.336 358.4h-18.133c-4.418 0-8-3.582-8-8v-18.133c0-4.418 3.582-8 8-8h18.133c4.418 0 8 3.582 8 8v18.133c0 4.418-3.582 8-8 8z"></path><path d="m145.603 358.4h-18.133c-4.418 0-8-3.582-8-8v-18.133c0-4.418 3.582-8 8-8h18.133c4.418 0 8 3.582 8 8v18.133c0 4.418-3.582 8-8 8z"></path><path d="m213.869 358.4h-18.133c-4.418 0-8-3.582-8-8v-18.133c0-4.418 3.582-8 8-8h18.133c4.418 0 8 3.582 8 8v18.133c0 4.418-3.581 8-8 8z"></path>
+</g><path d="m418.417 187.733h-17.65c-1.068 0-2.085.21-3.022.579 3.055 1.206 5.219 4.178 5.219 7.662v17.65c0 3.484-2.165 6.456-5.219 7.662.937.37 1.954.58 3.022.58h17.65c4.552 0 8.242-3.69 8.242-8.241v-17.65c-.001-4.552-3.691-8.242-8.242-8.242z" fill="#2a428c"></path><path d="m350.15 187.733h-17.65c-1.068 0-2.085.21-3.022.579 3.055 1.206 5.219 4.178 5.219 7.662v17.65c0 3.484-2.165 6.456-5.219 7.662.937.37 1.954.58 3.022.58h17.65c4.552 0 8.241-3.69 8.241-8.241v-17.65c0-4.552-3.689-8.242-8.241-8.242z" fill="#2a428c"></path><path d="m281.895 187.733h-17.65c-1.068 0-2.085.21-3.022.579 3.055 1.206 5.22 4.178 5.22 7.662v17.65c0 3.484-2.165 6.456-5.22 7.662.937.37 1.954.58 3.022.58h17.65c4.552 0 8.242-3.69 8.242-8.241v-17.65c-.001-4.552-3.691-8.242-8.242-8.242z" fill="#2a428c"></path><path d="m213.628 187.733h-17.65c-1.068 0-2.085.21-3.022.579 3.055 1.206 5.22 4.178 5.22 7.662v17.65c0 3.484-2.165 6.456-5.22 7.662.937.37 1.954.58 3.022.58h17.65c4.552 0 8.242-3.69 8.242-8.241v-17.65c-.001-4.552-3.69-8.242-8.242-8.242z" fill="#2a428c"></path><path d="m145.361 187.733h-17.65c-1.068 0-2.085.21-3.022.579 3.055 1.206 5.219 4.178 5.219 7.662v17.65c0 3.484-2.165 6.456-5.219 7.662.937.37 1.954.58 3.022.58h17.65c4.552 0 8.242-3.69 8.242-8.241v-17.65c0-4.552-3.69-8.242-8.242-8.242z" fill="#2a428c"></path><path d="m77.095 187.733h-17.65c-1.068 0-2.085.21-3.022.579 3.055 1.206 5.22 4.178 5.22 7.662v17.65c0 3.484-2.165 6.456-5.22 7.662.937.37 1.954.58 3.022.58h17.65c4.552 0 8.242-3.69 8.242-8.241v-17.65c-.001-4.552-3.691-8.242-8.242-8.242z" fill="#2a428c"></path><path d="m77.095 256h-17.65c-1.068 0-2.085.21-3.022.579 3.055 1.206 5.22 4.178 5.22 7.662v17.651c0 3.484-2.165 6.456-5.22 7.662.937.37 1.954.58 3.022.58h17.65c4.552 0 8.242-3.69 8.242-8.241v-17.651c-.001-4.552-3.691-8.242-8.242-8.242z" fill="#2a428c"></path><path d="m77.095 324.267h-17.65c-1.068 0-2.085.21-3.022.579 3.055 1.206 5.22 4.178 5.22 7.662v17.651c0 3.484-2.165 6.456-5.22 7.662.937.37 1.954.58 3.022.58h17.65c4.552 0 8.242-3.69 8.242-8.241v-17.651c-.001-4.553-3.691-8.242-8.242-8.242z" fill="#2a428c"></path><path d="m145.361 256h-17.65c-1.068 0-2.085.21-3.022.579 3.055 1.206 5.219 4.178 5.219 7.662v17.651c0 3.484-2.165 6.456-5.219 7.662.937.37 1.954.58 3.022.58h17.65c4.552 0 8.242-3.69 8.242-8.241v-17.651c0-4.552-3.69-8.242-8.242-8.242z" fill="#2a428c"></path><path d="m145.361 324.267h-17.65c-1.068 0-2.085.21-3.022.579 3.055 1.206 5.219 4.178 5.219 7.662v17.651c0 3.484-2.165 6.456-5.219 7.662.937.37 1.954.58 3.022.58h17.65c4.552 0 8.242-3.69 8.242-8.241v-17.651c0-4.553-3.69-8.242-8.242-8.242z" fill="#2a428c"></path><path d="m213.628 256h-17.65c-1.068 0-2.085.21-3.022.579 3.055 1.206 5.22 4.178 5.22 7.662v17.651c0 3.484-2.165 6.456-5.22 7.662.937.37 1.954.58 3.022.58h17.65c4.552 0 8.242-3.69 8.242-8.241v-17.651c-.001-4.552-3.69-8.242-8.242-8.242z" fill="#2a428c"></path><path d="m290.136 290.133v-25.892c0-4.552-3.69-8.241-8.242-8.241h-17.65c-1.068 0-2.085.21-3.022.579 3.055 1.206 5.22 4.178 5.22 7.662v17.651c0 3.484-2.165 6.456-5.22 7.662.937.37 1.954.58 3.022.58h25.892z" fill="#2a428c"></path><path d="m213.628 324.267h-17.65c-1.068 0-2.085.21-3.022.579 3.055 1.206 5.22 4.178 5.22 7.662v17.651c0 3.484-2.165 6.456-5.22 7.662.937.37 1.954.58 3.022.58h17.65c4.552 0 8.242-3.69 8.242-8.241v-17.651c-.001-4.553-3.69-8.242-8.242-8.242z" fill="#2a428c"></path><path d="m437.114 143.721v153.277 95.535h23.711v-95.535-143.398z" fill="#d3dcfb"></path><path d="m460.825 153.6v-85.334c0-18.851-15.282-34.132-34.132-34.132h-375.502c-18.851 0-34.132 15.281-34.132 34.132v85.334z" fill="#ff4155"></path><g><g><g><path d="m124.609 75.993h-22.217c-4.268 0-7.726-3.459-7.726-7.726s3.459-7.726 7.726-7.726h22.217c4.268 0 7.726 3.459 7.726 7.726s-3.459 7.726-7.726 7.726z" fill="#e80054"></path>
+</g><g><path d="m179.191 75.993h-22.217c-4.268 0-7.726-3.459-7.726-7.726s3.459-7.726 7.726-7.726h22.217c4.268 0 7.726 3.459 7.726 7.726s-3.458 7.726-7.726 7.726z" fill="#e80054"></path>
+</g><g><path d="m320.887 75.993h-22.218c-4.268 0-7.726-3.459-7.726-7.726s3.459-7.726 7.726-7.726h22.218c4.268 0 7.726 3.459 7.726 7.726s-3.458 7.726-7.726 7.726z" fill="#e80054"></path>
+</g><g><path d="m375.47 75.993h-22.218c-4.268 0-7.726-3.459-7.726-7.726s3.459-7.726 7.726-7.726h22.218c4.268 0 7.726 3.459 7.726 7.726s-3.459 7.726-7.726 7.726z" fill="#e80054"></path>
+</g>
+</g>
+</g><path d="m162.125 64c0 11.782-9.551 21.333-21.333 21.333s-21.333-9.551-21.333-21.333v-42.667c-.001-11.782 9.55-21.333 21.332-21.333s21.333 9.551 21.333 21.333v42.667z" fill="#ebf5fc"></path><path d="m358.403 64c0 11.782-9.551 21.333-21.333 21.333s-21.334-9.551-21.334-21.333v-42.667c0-11.782 9.551-21.333 21.333-21.333s21.333 9.551 21.333 21.333v42.667z" fill="#ebf5fc"></path><path d="m337.069 0c-4.38 0-8.448 1.324-11.836 3.588 5.725 3.826 9.498 10.343 9.498 17.746v42.666c0 7.402-3.773 13.92-9.498 17.746 3.387 2.263 7.456 3.588 11.836 3.588 11.782 0 21.333-9.551 21.333-21.333v-42.668c.001-11.782-9.55-21.333-21.333-21.333z" fill="#d3dcfb"></path><path d="m140.791 0c-4.38 0-8.448 1.324-11.836 3.588 5.725 3.826 9.498 10.343 9.498 17.746v42.666c0 7.402-3.773 13.92-9.498 17.746 3.387 2.263 7.456 3.588 11.836 3.588 11.782 0 21.333-9.551 21.333-21.333v-42.668c.001-11.782-9.55-21.333-21.333-21.333z" fill="#d3dcfb"></path><path d="m426.693 34.133h-23.703c18.851 0 34.132 15.281 34.132 34.132v85.335h23.702v-85.334c.001-18.851-15.281-34.133-34.131-34.133z" fill="#e80054"></path><path d="m17.058 111.74h443.767v15.453h-443.767z" fill="#e80054"></path>
+</g><circle cx="366.942" cy="384" fill="#4fabf7" r="128"></circle><circle cx="366.942" cy="384" fill="#ebf5fc" r="93.867"></circle><g><g><path d="m366.942 374.659c-4.268 0-7.726-3.459-7.726-7.726v-42.667c0-4.267 3.459-7.726 7.726-7.726 4.268 0 7.726 3.459 7.726 7.726v42.667c0 4.267-3.459 7.726-7.726 7.726z" fill="#3c58a0"></path>
+</g>
+</g><g><g><path d="m409.609 391.726h-25.601c-4.268 0-7.726-3.459-7.726-7.726s3.459-7.726 7.726-7.726h25.601c4.268 0 7.726 3.459 7.726 7.726s-3.459 7.726-7.726 7.726z" fill="#3c58a0"></path>
+</g>
+</g><path d="m366.942 256c-3.995 0-7.945.193-11.847.551 65.137 5.979 116.152 60.752 116.152 127.449s-51.016 121.47-116.153 127.449c3.902.358 7.852.551 11.847.551 70.692 0 128-57.308 128-128s-57.307-128-127.999-128z" fill="#1886ea"></path><path d="m366.942 290.133c-4.01 0-7.961.253-11.839.741 46.252 5.821 82.028 45.295 82.028 93.126s-35.776 87.305-82.028 93.126c3.878.488 7.829.741 11.839.741 51.841 0 93.867-42.026 93.867-93.867s-42.026-93.867-93.867-93.867z" fill="#d3dcfb"></path><circle cx="366.942" cy="384" fill="#ffdd40" r="17.067"></circle>
+</g></svg></span>
+                <p class="u-custom-font u-font-playfair-display u-text u-text-3">Appointments</p><span class="u-icon u-icon-circle u-text-palette-1-base u-icon-3"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-50d7"></use></svg><svg class="u-svg-content" viewBox="0 0 512 512" id="svg-50d7"><g><g><g><g id="XMLID_1769_"><g id="XMLID_1770_"><g id="XMLID_1771_"><g id="XMLID_1772_"><g id="XMLID_1773_"><g id="XMLID_1774_"><g id="XMLID_1775_"><g id="XMLID_1776_"><g id="XMLID_1777_"><g id="XMLID_1778_"><g id="XMLID_1779_"><g id="XMLID_1780_"><g id="XMLID_1926_"><g id="XMLID_1927_"><g id="XMLID_1938_"><circle cx="256" cy="256" fill="#ffdd54" r="256"></circle>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g><path d="m512 256c0-24.545-3.462-48.281-9.911-70.753l-103.505-103.505-280.149 353.535 66.812 66.812c22.472 6.45 46.208 9.911 70.753 9.911 141.385 0 256-114.615 256-256z" fill="#ecbe00"></path><g><g><path d="m378.6 440.337h-245.2c-13.931 0-25.329-11.695-25.329-25.988v-316.698c0-14.294 11.398-25.988 25.329-25.988h60.059l62.541 24.255 62.54-24.256h60.06c13.931 0 25.329 11.695 25.329 25.988v316.698c-.001 14.295-11.398 25.989-25.329 25.989z" fill="#494949"></path><path d="m403.93 97.65v316.7c0 14.29-11.4 25.99-25.33 25.99h-122.6v-344.42l62.54-24.26h60.06c13.93 0 25.33 11.7 25.33 25.99z" fill="#2d2d2d"></path><path d="m140.561 110.008h230.879v285.695h-230.879z" fill="#fff"></path><path d="m256 110.01h115.44v285.69h-115.44z" fill="#f1f4f6"></path><g><g><path d="m290.251 147.812h-68.502c-15.599 0-28.29-12.69-28.29-28.289v-47.86h125.081v47.86c0 15.599-12.69 28.289-28.289 28.289z" fill="#ff4d05"></path>
+</g>
+</g><g><g><g><path d="m318.54 71.66v47.86c0 15.6-12.69 28.29-28.29 28.29h-34.25v-76.15z" fill="#c30047"></path>
+</g>
+</g>
+</g>
+</g><g><g><path d="m174.811 181.754h44.988v30h-44.988z" fill="#00e4ef"></path>
+</g>
+</g><g><g><path d="m256 181.754h80.365v30h-80.365z" fill="#5ecbf1"></path>
+</g>
+</g><g><path d="m291.377 247.076h44.988v30h-44.988z" fill="#5ecbf1"></path>
+</g><g><g><path d="m174.811 247.076h81.189v30h-81.189z" fill="#00e4ef"></path>
+</g>
+</g><g><g><path d="m174.811 312.398h44.988v30h-44.988z" fill="#00e4ef"></path>
+</g>
+</g><g><g><path d="m256 312.398h80.365v30h-80.365z" fill="#5ecbf1"></path>
+</g>
+</g>
+</g>
+</g></svg></span>
+                <p class="u-custom-font u-font-playfair-display u-text u-text-4">Records</p>
+              </div>
+            </div>
+            <div class="u-container-style u-layout-cell u-palette-2-base u-size-52 u-layout-cell-2">
+              <div class="u-container-layout u-container-layout-2">
+                <div class="u-align-center u-container-style u-group u-shape-rectangle u-white u-group-1">
+                  <div class="u-container-layout u-valign-middle u-container-layout-3">
+                    <h4 class="u-custom-font u-font-playfair-display u-text u-text-5">Invoice</h4>
+                  </div>
+                </div>
+                <form action="" method="POST" class="u-clearfix u-form-custom-backend u-form-spacing-10 u-form-vertical u-inner-form" style="padding: 10px" source="custom" name="form" redirect="true" redirect-address="Home.html" redirect-url="54254606">
+                  {% csrf_token %}
+                  <div class="u-form u-form-1">
+                      <input type="hidden" id="siteId" name="siteId" value="15542603">
+                      <input type="hidden" id="pageId" name="pageId" value="628408124">
+                      <div class="u-form-group u-form-name u-form-partition-factor-2">
+                        <label for="name-3c99" class="u-form-control-hidden u-label">Name</label>
+                       {{form.Name}}
+                      </div>
+                      <div class="u-form-date u-form-group u-form-group-2">
+                        <label for="email-3c99" class="u-form-control-hidden u-label">Email</label>
+                       {{form.Contact_no}}
+                      </div>
+                      <div class="u-form-date u-form-group u-form-group-3">
+                        <label for="text-cf48" class="u-form-control-hidden u-label"></label>
+                          {{form.Date}}
+                        </div>
+                      <div class="u-form-group u-form-group-4">
+                        <label for="text-bbda" class="u-form-control-hidden u-label"></label>
+                        {{form.Concern}}
+                      </div>
+                      <div class="u-form-group u-form-group-5">
+                        <label for="text-c7fc" class="u-form-control-hidden u-label"></label>
+                        {{form.Amount_Due}}
+                      </div>
+                      <div class="u-align-right u-form-group u-form-submit">
+                        <a href="#" class="u-btn u-btn-submit u-button-style">UPLOAD<br>
+                        </a>
+                        <input type="submit" value="submit" class="u-form-control-hidden">
+                      </div>
+                      <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>
+                      <div class="u-form-send-error u-form-send-message"> Unable to send your message. Please fix errors then try again. </div>
+                      <input type="hidden" value="" name="recaptchaResponse">
+                    </form>
+                  </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

@@ -41,12 +41,21 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_truncate',
     'corsheaders',
+    'keyboard_shortcuts',
 
     #Created by jon
     "pages",
     "Dentist_Acct",
     "Client",
+    'django_filters',
 ]
+
+HOTKEYS = [
+            {'keys': 'g + h',  # go home
+            'link': "/Dentist_Login/",
+            }
+]
+SPECIAL_DISABLED = True
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -89,7 +98,7 @@ WSGI_APPLICATION = 'web_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'LIVE_DBV2',
+        'NAME': 'LIVE_DB5',
         'USER': 'dare',
         'PASSWORD': "daremaster",
         'HOST': "dare-dbs.c8fxnwcyffif.ap-southeast-1.rds.amazonaws.com",

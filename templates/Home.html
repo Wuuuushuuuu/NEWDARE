@@ -1,4 +1,5 @@
 {% load static %}
+{% load hotkeys %}
 
 <!DOCTYPE html>
 <html style="font-size: 16px;">
@@ -9,6 +10,7 @@
     <meta name="description" content="">
     <meta name="page_type" content="np-template-header-footer-from-plugin">
     <title>Home</title>
+    {% setup_hotkeys %}
     <link rel="stylesheet" type="text/css" href="{% static 'nicepage.css' %}" media="screen">
 <link rel="stylesheet" type="text/css" href="{% static 'Home.css' %}" media="screen">
     <script class="u-script" type="text/javascript" src="{% static 'jquery.js' %}" defer=""></script>
@@ -121,7 +123,7 @@
                   <h2 class="u-align-left u-custom-font u-font-playfair-display u-text u-text-1">Quality Service</h2>
                   <p class="u-align-justify u-text u-text-2">Dr. Samanatha S Mananghaya is not your ordinary dentist. Being the second g​eneration of dentists in the Simbajon family, she carries on the trust and service that is known in the Simbajon name.</p>
                   <p class="u-align-justify u-text u-text-3">We strive to give you a quality service that can only be found in the Simbajon name. Trust in us and join our family!</p>
-                  <a href="" class="u-border-2 u-border-white u-btn u-btn-rectangle u-button-style u-hover-palette-2-base u-none u-btn-1">learn more</a>
+                  <a href="{% url 'About' %}" class="u-border-2 u-border-white u-btn u-btn-rectangle u-button-style u-hover-palette-2-base u-none u-btn-1">learn more</a>
                 </div>
               </div>
             </div>
